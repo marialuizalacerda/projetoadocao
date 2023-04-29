@@ -28,10 +28,10 @@
         </h2>
 
         <div class="button">
-          <a href="#" 
-          onclick="Modal.open()"
-          class="button one">Quero adotar</a>
-          <a href="#" class="button one">Quero divulgar um animal</a>
+          <a href="#" onclick="Divulgar.open()" class="button one"
+            >Quero divulgar um animal</a
+          >
+
           <a href="#" class="button one">Quero ajudar</a>
         </div>
 
@@ -40,13 +40,19 @@
           <p>Disponível</p>
 
           <img class="image" src="/projetoadocao/image/bob.jpg" alt="bob" />
+          <a href="#" onclick="Modal.open()" class="button one">Quero adotar</a>
         </div>
 
         <div class="card">
           <h3>Caramelo</h3>
           <p>Adotado</p>
 
-          <img class="image" src="/projetoadocao/image/caramelo.jpg" alt="caramelo" />
+          <img
+            class="image"
+            src="/projetoadocao/image/caramelo.jpg"
+            alt="caramelo"
+          />
+          <a href="#" onclick="Modal.open()" class="button one">Quero adotar</a>
         </div>
 
         <div class="card">
@@ -54,6 +60,7 @@
           <p>Disponível</p>
 
           <img class="image" src="/projetoadocao/image/luna.jpg" alt="luna" />
+          <a href="#" onclick="Modal.open()" class="button one">Quero adotar</a>
         </div>
       </section>
     </main>
@@ -62,20 +69,129 @@
       <div class="modal">
         <div id="form">
           <h2>Quer adotar?</h2>
-          <h3>Para adotar ou saber mais sobre, entre em contato com o protetor:</h3>
+          <h3>
+            Para adotar ou saber mais sobre, entre em contato com o protetor:
+          </h3>
           <p>lacerdamarialuiza@gmail.com</p>
           <p>(37) 99915-9912</p>
-      
-              <div class="input-group actions">
-                <a href="#" 
-                onclick="Modal.close()"
-                class="button cancel">Cancelar</a>
-                
-              </div>
-            </div>
+
+          <div class="input-group actions">
+            <a href="#" onclick="Modal.close()" class="button cancel"
+              >Cancelar</a
+            >
+          </div>
         </div>
       </div>
-    
+    </div>
+
+    <form action="" id="cadastro" method="post">
+      <div class="modal-overlay active">
+        <div class="modal">
+          <div id="form">
+            <h2>Cadastre um peludo para adoção</h2>
+            <p>(Informações marcadas com * são obrigatórias)</p>
+
+            <label for="nome">Nome do bichinho: *</label>
+            <input id="nome" type="text" name="nome" autofocus required />
+            <br />
+
+            <label for="especie">Espécie:*</label>
+            <input
+              id="especie"
+              type="text"
+              list="especie"
+              name="especie"
+              required
+            />
+            <datalist id="especie">
+              <option>cachorro</option>
+              <option>gato</option>
+            </datalist>
+            <br>            
+
+            <label for="sexo">Sexo:*</label>
+            <input id="sexo" type="text" list="sexo" name="sexo" required />
+            <datalist id="sexo">
+              <option>fêmea</option>
+              <option>macho</option>
+            </datalist>
+
+            <br />
+            
+            <label for="idade">Idade:*</label>
+            <input id="idade" type="text" list="idade" name="idade" required />
+            <datalist id="idade">
+              <option>idoso</option>
+              <option>adulto</option>
+              <option>filhote</option>
+            </datalist>
+
+            <br />
+            
+            <label for="porte">Porte:*</label>
+            <input id="porte" type="text" list="porte" name="porte" required />
+            <datalist id="porte">
+              <option>pequeno</option>
+              <option>médio</option>
+              <option>grande</option>
+            </datalist>
+
+            <br />
+            
+            <label for="estado">Estado: *</label>
+            <input id="estado" type="text" name="estado" required />
+
+            <br />
+            
+            <label for="cidade">Cidade: *</label>
+            <input id="cidade" type="text" name="cidade" required />
+
+            <br />
+          
+            <label for="historia">História do bicho: </label>
+            <br />
+            <textarea
+              name="historia"
+              id="historia"
+              cols="30"
+              rows="10"
+              maxlength="2000"
+            ></textarea>
+
+            <br />
+            
+            <label for="foto">Foto principal: * </label>
+            <input
+              id="foto"
+              type="file"
+              accept="image/*"
+              name="foto"
+              multiple
+              required
+            />
+            <br />
+            
+            <h2>Dados do protetor</h2>
+            <label for="nome">Nome: * </label>
+            <input id="nome" type="text" name="nome" required />
+            <br />
+            
+            <label for="contato">Telefone para contato: * </label>
+            <input id="contato" type="text" name="contato" required />
+            <br />
+            
+            <button type="submit">Salvar</button>
+            <br>
+
+            <div class="input-group actions">
+              <a href="#" onclick="Divulgar.close()" class="button cancel"
+                >Cancelar</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
 
     <footer>
       <p>Quer adotar um bichinho? ou</p>
@@ -85,19 +201,35 @@
     </footer>
 
     <script>
-      const modal = {
-        open (){
+      const Modal = {
+        open() {
           //abrir o modal informativo
           //adicionar a class active do modal informativo
-          document.querySelector('.modal-overlay')
-          .classList.add('active')
+          document.querySelector(".modal-overlay").classList.add("active");
         },
-        close(){
+        close() {
           //fechar o modal informativo
           //Remover a class active do modal
-          document.querySelector('.modal-overlay')
-          .classList.remove('active')
-        }
-      }
-    </script>
+          document.querySelector(".modal-overlay").classList.remove("active");
+        },
+      };
 
+      const Divulgar = {
+        open() {
+          //abrir o modal informativo
+          //adicionar a class active do modal informativo
+          document.querySelector(".modal-overlay").classList.add("active");
+        },
+        close() {
+          //fechar o modal informativo
+          //Remover a class active do modal
+          document.querySelector(".modal-overlay").classList.remove("active");
+        },
+      };
+
+          
+              
+
+    </script>
+  </body>
+</html>
