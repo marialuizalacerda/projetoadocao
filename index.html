@@ -27,13 +27,11 @@
           família!
         </h2>
 
-        <div class="button">
-          <a href="#" onclick="Divulgar.open()" class="button one"
-            >Quero divulgar um animal</a
-          >
+        <a href="#" onclick="Divulgar.open()" class="button one"
+          >Quero divulgar um animal</a
+        >
 
-          <a href="#" class="button one">Quero ajudar</a>
-        </div>
+        <a href="#" onclick="Modal.open()" class="button one">Quero ajudar</a>
 
         <div class="card">
           <h3>Bob</h3>
@@ -84,114 +82,117 @@
       </div>
     </div>
 
-    <form action="" id="cadastro" method="post">
-      <div class="modal-overlay active">
-        <div class="modal">
-          <div id="form">
-            <h2>Cadastre um peludo para adoção</h2>
-            <p>(Informações marcadas com * são obrigatórias)</p>
+    <div class="modal-cadastro active">
+      <div class="modal">
+        <div id="form">
+          <h2>Cadastre um peludo para adoção</h2>
+          <p>(Informações marcadas com * são obrigatórias)</p>
 
-            <label for="nome">Nome do bichinho: *</label>
-            <input id="nome" type="text" name="nome" autofocus required />
-            <br />
+          <label for="nome">Nome do bichinho: *</label>
+          <input id="nome" type="text" name="nome" autofocus required />
+          <br />
 
-            <label for="especie">Espécie:*</label>
-            <input
-              id="especie"
-              type="text"
-              list="especie"
-              name="especie"
-              required
-            />
-            <datalist id="especie">
-              <option>cachorro</option>
-              <option>gato</option>
-            </datalist>
-            <br>            
+          <label for="especie">Espécie:*</label>
+          <input
+            id="especie"
+            type="text"
+            list="especie"
+            name="especie"
+            required
+          />
+          <datalist id="especie">
+            <option>cachorro</option>
+            <option>gato</option>
+          </datalist>
+          <br />
 
-            <label for="sexo">Sexo:*</label>
-            <input id="sexo" type="text" list="sexo" name="sexo" required />
-            <datalist id="sexo">
-              <option>fêmea</option>
-              <option>macho</option>
-            </datalist>
+          <label for="sexo">Sexo:*</label>
+          <input id="sexo" type="text" list="sexo" name="sexo" required />
+          <datalist id="sexo">
+            <option>fêmea</option>
+            <option>macho</option>
+          </datalist>
 
-            <br />
-            
-            <label for="idade">Idade:*</label>
-            <input id="idade" type="text" list="idade" name="idade" required />
-            <datalist id="idade">
-              <option>idoso</option>
-              <option>adulto</option>
-              <option>filhote</option>
-            </datalist>
+          <br />
 
-            <br />
-            
-            <label for="porte">Porte:*</label>
-            <input id="porte" type="text" list="porte" name="porte" required />
-            <datalist id="porte">
-              <option>pequeno</option>
-              <option>médio</option>
-              <option>grande</option>
-            </datalist>
+          <label for="idade">Idade:*</label>
+          <input id="idade" type="text" list="idade" name="idade" required />
+          <datalist id="idade">
+            <option>idoso</option>
+            <option>adulto</option>
+            <option>filhote</option>
+          </datalist>
 
-            <br />
-            
-            <label for="estado">Estado: *</label>
-            <input id="estado" type="text" name="estado" required />
+          <br />
 
-            <br />
-            
-            <label for="cidade">Cidade: *</label>
-            <input id="cidade" type="text" name="cidade" required />
+          <label for="porte">Porte:*</label>
+          <input id="porte" type="text" list="porte" name="porte" required />
+          <datalist id="porte">
+            <option>pequeno</option>
+            <option>médio</option>
+            <option>grande</option>
+          </datalist>
 
-            <br />
-          
-            <label for="historia">História do bicho: </label>
-            <br />
-            <textarea
-              name="historia"
-              id="historia"
-              cols="30"
-              rows="10"
-              maxlength="2000"
-            ></textarea>
+          <br />
 
-            <br />
-            
-            <label for="foto">Foto principal: * </label>
-            <input
-              id="foto"
-              type="file"
-              accept="image/*"
-              name="foto"
-              multiple
-              required
-            />
-            <br />
-            
-            <h2>Dados do protetor</h2>
-            <label for="nome">Nome: * </label>
-            <input id="nome" type="text" name="nome" required />
-            <br />
-            
-            <label for="contato">Telefone para contato: * </label>
-            <input id="contato" type="text" name="contato" required />
-            <br />
-            
-            <button type="submit">Salvar</button>
-            <br>
+          <label for="estado">Estado: *</label>
+          <input id="estado" type="text" name="estado" required />
 
-            <div class="input-group actions">
-              <a href="#" onclick="Divulgar.close()" class="button cancel"
-                >Cancelar</a
-              >
-            </div>
+          <br />
+
+          <label for="cidade">Cidade: *</label>
+          <input id="cidade" type="text" name="cidade" required />
+
+          <br />
+
+          <label for="historia">História do bicho: </label>
+          <br />
+          <textarea
+            name="historia"
+            id="historia"
+            cols="30"
+            rows="10"
+            maxlength="2000"
+          ></textarea>
+
+          <br />
+
+          <label for="foto">Foto principal: * </label>
+          <input
+            id="foto"
+            type="file"
+            accept="image/*"
+            name="foto"
+            multiple
+            required
+          />
+          <br />
+
+          <h2>Dados do protetor</h2>
+          <label for="nome">Nome: * </label>
+          <input id="nome" type="text" name="nome" required />
+          <br />
+
+          <label for="contato">Telefone para contato: * </label>
+          <input id="contato" type="text" name="contato" required />
+          <br />
+          <br>
+
+          <div class="input-group actions">
+            <a href="#" onclick="Divulgar.close()" class="button cadastrar"
+              >Cancelar</a
+            >
+            <button
+              id="button cadastrar"
+              class="button cadastrar"
+              type="submit"
+            >
+              Salvar
+            </button>
           </div>
         </div>
       </div>
-    </form>
+    </div>
 
     <footer>
       <p>Quer adotar um bichinho? ou</p>
@@ -199,37 +200,6 @@
         Gostaria de ser voluntário? <a href="http://">Fale</a> com a gente! ♥
       </p>
     </footer>
-
-    <script>
-      const Modal = {
-        open() {
-          //abrir o modal informativo
-          //adicionar a class active do modal informativo
-          document.querySelector(".modal-overlay").classList.add("active");
-        },
-        close() {
-          //fechar o modal informativo
-          //Remover a class active do modal
-          document.querySelector(".modal-overlay").classList.remove("active");
-        },
-      };
-
-      const Divulgar = {
-        open() {
-          //abrir o modal informativo
-          //adicionar a class active do modal informativo
-          document.querySelector(".modal-overlay").classList.add("active");
-        },
-        close() {
-          //fechar o modal informativo
-          //Remover a class active do modal
-          document.querySelector(".modal-overlay").classList.remove("active");
-        },
-      };
-
-          
-              
-
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
