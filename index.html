@@ -82,6 +82,7 @@
       </div>
     </div>
 
+    <form id="form">
     <div class="modal-cadastro active">
       <div class="modal">
         <div id="form">
@@ -92,57 +93,47 @@
           <input id="nome" type="text" name="nome" autofocus required />
           <br />
 
-          <label for="especie">Espécie:*</label>
-          <input
-            id="especie"
-            type="text"
-            list="especie"
-            name="especie"
-            required
-          />
-          <datalist id="especie">
-            <option>cachorro</option>
-            <option>gato</option>
+          <label for="especies">Espécie:*</label>
+          <input type="text" name="especie" list="especie" id="especies" required>
+
+          <datalist id="especie" >
+            <option value="cachorro"></option>
+            <option value="gato"></option>
           </datalist>
           <br />
 
-          <label for="sexo">Sexo:*</label>
-          <input id="sexo" type="text" list="sexo" name="sexo" required />
+          <label for="gender">Sexo:*</label>
+          <input  type="text" name="sexo" list="sexo" id="gender" required>
           <datalist id="sexo">
-            <option>fêmea</option>
-            <option>macho</option>
+            <option  value="fêmea"></option>
+            <option value="macho"></option>
           </datalist>
-
           <br />
 
-          <label for="idade">Idade:*</label>
-          <input id="idade" type="text" list="idade" name="idade" required />
+          <label for="idades">Idade:*</label>
+          <input type="text" list="idade" id="idades" required>
           <datalist id="idade">
-            <option>idoso</option>
-            <option>adulto</option>
-            <option>filhote</option>
+            <option value="idoso"></option>
+            <option value="adulto"></option>
+            <option value="filhote"></option>
           </datalist>
-
           <br />
 
-          <label for="porte">Porte:*</label>
-          <input id="porte" type="text" list="porte" name="porte" required />
+          <label for="portes">Porte:*</label>
+          <input type="text" list="porte" id="portes" required />
           <datalist id="porte">
-            <option>pequeno</option>
-            <option>médio</option>
-            <option>grande</option>
+            <option value="pequeno"></option>
+            <option value="média"></option>
+            <option value="grande"></option>
           </datalist>
-
           <br />
 
           <label for="estado">Estado: *</label>
           <input id="estado" type="text" name="estado" required />
-
           <br />
 
           <label for="cidade">Cidade: *</label>
           <input id="cidade" type="text" name="cidade" required />
-
           <br />
 
           <label for="historia">História do bicho: </label>
@@ -154,7 +145,6 @@
             rows="10"
             maxlength="2000"
           ></textarea>
-
           <br />
 
           <label for="foto">Foto principal: * </label>
@@ -170,12 +160,12 @@
 
           <h2>Dados do protetor</h2>
           <label for="nome">Nome: * </label>
-          <input id="nome" type="text" name="nome" required />
+          <input id="protetor" type="text" name="nome" required />
           <br />
 
           <label for="contato">Telefone para contato: * </label>
           <input id="contato" type="text" name="contato" required />
-          <br />
+          <br/>
           <br>
 
           <div class="input-group actions">
@@ -186,13 +176,14 @@
               id="button cadastrar"
               class="button cadastrar"
               type="submit"
-            >
+              onclick="Cadastro.salvar()">
               Salvar
             </button>
           </div>
         </div>
       </div>
     </div>
+  </form>
 
     <footer>
       <p>Quer adotar um bichinho? ou</p>

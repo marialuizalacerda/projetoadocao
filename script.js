@@ -23,3 +23,44 @@ const Divulgar = {
     document.querySelector(".modal-cadastro").classList.remove("active");
   },
 };
+
+const Cadastro = {
+  salvar() {
+    const form =document.getElementById('form').value;
+    const nome = document.getElementById("nome").value;
+
+    const especies = document.getElementById ("especies").value;
+    const gender = document.getElementById ("gender").value;
+    const idades= document.getElementById("idades").value;
+    const portes = document.getElementById("portes").value;
+
+    const estado = document.getElementById("estado").value;
+    const cidade = document.getElementById("cidade").value;
+    const historia = document.getElementById("historia").value;
+    const protetor = document.getElementById("protetor").value;
+    const contato = document.getElementById("contato").value;
+
+    
+    console.log(nome)
+
+    console.log(especies)
+    console.log(gender)
+    console.log(idades)
+    console.log(portes)
+
+    console.log(estado)
+    console.log(cidade)
+    console.log(historia)
+    console.log(protetor)
+    console.log(contato)
+  },
+
+};
+
+  
+    
+
+
+
+
+
