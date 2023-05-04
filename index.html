@@ -33,32 +33,17 @@
 
         <a href="#" onclick="Modal.open()" class="button one">Quero ajudar</a>
 
-        <div class="card">
-          <h3>Bob</h3>
-          <p>Disponível</p>
-
-          <img class="image" src="/projetoadocao/image/bob.jpg" alt="bob" />
-          <a href="#" onclick="Modal.open()" class="button one">Quero adotar</a>
-        </div>
-
-        <div class="card">
-          <h3>Caramelo</h3>
-          <p>Adotado</p>
-
-          <img
-            class="image"
-            src="/projetoadocao/image/caramelo.jpg"
-            alt="caramelo"
-          />
-          <a href="#" onclick="Modal.open()" class="button one">Quero adotar</a>
-        </div>
-
-        <div class="card">
-          <h3>Luna</h3>
-          <p>Disponível</p>
-
-          <img class="image" src="/projetoadocao/image/luna.jpg" alt="luna" />
-          <a href="#" onclick="Modal.open()" class="button one">Quero adotar</a>
+        <div id="lista-animais">
+          <div class="card">
+            <h3></h3>
+            <img class="image" src="" alt="" />
+            <p></p>
+            <p id="localizacao"></p>
+            <p id="h"></p>
+            <a id="myButton" href="#" onclick="Modal.open()" class="button one" style="display: none;"
+              >Quero adotar</a
+            >
+          </div>
         </div>
       </section>
     </main>
@@ -83,107 +68,114 @@
     </div>
 
     <form id="form">
-    <div class="modal-cadastro active">
-      <div class="modal">
-        <div id="form">
-          <h2>Cadastre um peludo para adoção</h2>
-          <p>(Informações marcadas com * são obrigatórias)</p>
+      <div class="modal-cadastro">
+        <div class="modal">
+          <div id="form">
+            <h2>Cadastre um peludo para adoção</h2>
+            <p>(Informações marcadas com * são obrigatórias)</p>
 
-          <label for="nome">Nome do bichinho: *</label>
-          <input id="nome" type="text" name="nome" autofocus required />
-          <br />
+            <label for="nome">Nome do bichinho: *</label>
+            <input id="nome" type="text" name="nome" autofocus required />
+            <br />
 
-          <label for="especies">Espécie:*</label>
-          <input type="text" name="especie" list="especie" id="especies" required>
+            <label for="especies">Espécie:*</label>
+            <input
+              type="text"
+              name="especie"
+              list="especie"
+              id="especies"
+              required
+            />
 
-          <datalist id="especie" >
-            <option value="cachorro"></option>
-            <option value="gato"></option>
-          </datalist>
-          <br />
+            <datalist id="especie">
+              <option value="cachorro"></option>
+              <option value="gato"></option>
+            </datalist>
+            <br />
 
-          <label for="gender">Sexo:*</label>
-          <input  type="text" name="sexo" list="sexo" id="gender" required>
-          <datalist id="sexo">
-            <option  value="fêmea"></option>
-            <option value="macho"></option>
-          </datalist>
-          <br />
+            <label for="gender">Sexo:*</label>
+            <input type="text" name="sexo" list="sexo" id="gender" required />
+            <datalist id="sexo">
+              <option value="fêmea"></option>
+              <option value="macho"></option>
+            </datalist>
+            <br />
 
-          <label for="idades">Idade:*</label>
-          <input type="text" list="idade" id="idades" required>
-          <datalist id="idade">
-            <option value="idoso"></option>
-            <option value="adulto"></option>
-            <option value="filhote"></option>
-          </datalist>
-          <br />
+            <label for="idades">Idade:*</label>
+            <input type="text" list="idade" id="idades" required />
+            <datalist id="idade">
+              <option value="idoso"></option>
+              <option value="adulto"></option>
+              <option value="filhote"></option>
+            </datalist>
+            <br />
 
-          <label for="portes">Porte:*</label>
-          <input type="text" list="porte" id="portes" required />
-          <datalist id="porte">
-            <option value="pequeno"></option>
-            <option value="média"></option>
-            <option value="grande"></option>
-          </datalist>
-          <br />
+            <label for="portes">Porte:*</label>
+            <input type="text" list="porte" id="portes" required />
+            <datalist id="porte">
+              <option value="pequeno"></option>
+              <option value="média"></option>
+              <option value="grande"></option>
+            </datalist>
+            <br />
 
-          <label for="estado">Estado: *</label>
-          <input id="estado" type="text" name="estado" required />
-          <br />
+            <label for="estado">Estado: *</label>
+            <input id="estado" type="text" name="estado" required />
+            <br />
 
-          <label for="cidade">Cidade: *</label>
-          <input id="cidade" type="text" name="cidade" required />
-          <br />
+            <label for="cidade">Cidade: *</label>
+            <input id="cidade" type="text" name="cidade" required />
+            <br />
 
-          <label for="historia">História do bicho: </label>
-          <br />
-          <textarea
-            name="historia"
-            id="historia"
-            cols="30"
-            rows="10"
-            maxlength="2000"
-          ></textarea>
-          <br />
+            <label for="historia">História do bicho: </label>
+            <br />
+            <textarea
+              name="historia"
+              id="historia"
+              cols="30"
+              rows="10"
+              maxlength="2000"
+            ></textarea>
+            <br />
 
-          <label for="foto">Foto principal: * </label>
-          <input
-            id="foto"
-            type="file"
-            accept="image/*"
-            name="foto"
-            multiple
-            required
-          />
-          <br />
+            <label for="foto">Foto principal: * </label>
+            <input
+              id="foto"
+              type="file"
+              accept="image/*"
+              name="foto"
+              multiple
+              required
+            />
+            <br />
 
-          <h2>Dados do protetor</h2>
-          <label for="nome">Nome: * </label>
-          <input id="protetor" type="text" name="nome" required />
-          <br />
+            <h2>Dados do protetor</h2>
+            <label for="nome">Nome: * </label>
+            <input id="protetor" type="text" name="nome" required />
+            <br />
 
-          <label for="contato">Telefone para contato: * </label>
-          <input id="contato" type="text" name="contato" required />
-          <br/>
-          <br>
+            <label for="contato">Telefone para contato: * </label>
+            <input id="contato" type="text" name="contato" required />
+            <br />
+            <br />
 
-          <div class="input-group actions">
-            <a href="#" onclick="Divulgar.close()" class="button cadastrar"
-              >Cancelar</a
-            >
-            <button
-              id="button cadastrar"
-              class="button cadastrar"
-              type="submit"
-              onclick="Cadastro.salvar()">
-              Salvar
-            </button>
+            <div class="input-group actions">
+              <a href="#" onclick="Divulgar.close()" class="button cadastrar"
+                >Cancelar</a
+              >
+              <button
+                id="button cadastrar"
+                class="button cadastrar"
+                type="submit"
+                onclick="Cadastro.salvar()"
+              >
+                Salvar
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </form>
+    </form>
 
     <footer>
       <p>Quer adotar um bichinho? ou</p>
