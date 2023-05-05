@@ -73,25 +73,23 @@ const NewCard = {
     //Cria o elemento H3
     const newH3 = document.createElement('h3')
     //Passa o nome do animal para o H3
-    newH3.innerHTML = paramNome
+    newH3.innerText = paramNome
     //Insere o H3 como filho da nova div criada
     newDiv.appendChild(newH3)
 
     const newP = document.createElement('p')
-    newP.innerHTML = paramEspecies
+    newP.innerText = paramEspecies
     newDiv.appendChild(newP)
 
     const newLocalizacao = document.createElement('p')
     newLocalizacao.id = 'localizacao'
-    const newLocalizacao = document.getElementById('localizacao')
-    newLocalizacao.innerHTML = paramCidade, paramEstado
+    newLocalizacao.innerText = `${paramCidade} - ${paramEstado}`
     newDiv.appendChild(newLocalizacao)
 
     //Cria o elemento da história do bicho
     const newH = document.createElement('p')
     newH.id = 'h'
-    const newH = document.getElementById('h')
-    newH.innerHTML = paramHistoria
+    newH.innerText = paramHistoria
     newDiv.appendChild(newH)
     
     
