@@ -81,17 +81,27 @@ const NewCard = {
     newP.innerHTML = paramEspecies
     newDiv.appendChild(newP)
 
+    const newLocalizacao = document.createElement('p')
+    newLocalizacao.id = 'localizacao'
     const newLocalizacao = document.getElementById('localizacao')
     newLocalizacao.innerHTML = paramCidade, paramEstado
     newDiv.appendChild(newLocalizacao)
 
     //Cria o elemento da história do bicho
+    const newH = document.createElement('p')
+    newH.id = 'h'
     const newH = document.getElementById('h')
-    //Passa a historia para o p 'historia'
     newH.innerHTML = paramHistoria
-    //Insere o p 'historia' como filho da nova div criada
     newDiv.appendChild(newH)
     
+    
+    const newButton = document.createElement('button')
+    
+    newButton.className= 'button one'
+    newButton.textContent = 'Quero adotar'
+    newDiv.appendChild(newButton)
+     
+   
 
     divList.appendChild(newDiv)
 
@@ -99,6 +109,9 @@ const NewCard = {
     Divulgar.close()
   }
 }
+
+
+
 
   
     
