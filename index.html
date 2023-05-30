@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -80,7 +81,7 @@
     <form id="form">
       <div class="modal-cadastro">
         <div class="modal">
-          <div id="form">
+          
             <h2>Cadastre um peludo para adoção</h2>
             <p>(Informações marcadas com * são obrigatórias)</p>
 
@@ -148,15 +149,8 @@
             ></textarea>
             <br />
 
-            <label for="foto">Foto principal: * </label>
-            <input
-              id="foto"
-              type="file"
-              accept="image/*"
-              name="foto"
-              multiple
-              required
-            />
+            <label for="foto">Foto principal: *</label>
+            <input type="file" id="imagemInput" accept="image/*" name="foto" required>
             <br />
 
             <h2>Dados do protetor</h2>
@@ -182,7 +176,6 @@
                 Salvar
               </button>
             </div>
-          </div>
         </div>
       </div>
     </form>

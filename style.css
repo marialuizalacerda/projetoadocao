@@ -6,7 +6,7 @@
 
 body {
     background: #f5c9f3;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     }
 
 .container {
@@ -135,12 +135,12 @@ a {
 
 
 
-.image {
+.imagem-card {
     border-radius: 1rem;
-    text-align: center;
-    
-    display: block;
+   
     width: 100%;
+    height: auto;
+    object-fit: cover;
     overflow-x: auto;
 }
 
@@ -203,6 +203,14 @@ a {
 
 #form {
     max-width: 800px; 
+    text-align: justify;
+    
+    
+    line-height: 24px;
+    margin-top: 8px;
+
+    
+    
 }
 
 #form h2 {
@@ -226,16 +234,30 @@ a {
     color: #e072f4;
     
 }
+    
+
+#form input {
+    border-radius: 0.7rem;
+    padding: 2px 0;
+    margin: 4px 0;
+    
+}
+
+#form textarea {
+    border-radius: 1rem;
+}
 
 
 .input-group.actions {
     display: flex;
     align-items: center;
+    
 }
 
 .input-group.actions .button,
 .input-group.actions button {
     width: 40%;
+    
 
 }
 

@@ -37,6 +37,11 @@ const Cadastro = {
     const estado = document.getElementById("estado").value;
     const cidade = document.getElementById("cidade").value;
     const historia = document.getElementById("historia").value;
+
+    const fotoInput = document.getElementById("imagemInput");
+    const foto = fotoInput.files[0];
+
+
     const protetor = document.getElementById("protetor").value;
     const contato = document.getElementById("contato").value;
 
@@ -51,17 +56,23 @@ const Cadastro = {
     console.log(estado)
     console.log(cidade)
     console.log(historia)
+    console.log(foto)
     console.log(protetor)
     console.log(contato)
 
-    NewCard.new(nome, especies, cidade, estado, historia)
+    NewCard.new(nome, especies, cidade, estado, historia, foto)
 
   },
 
 };
 
 const NewCard = {
-  new(paramNome, paramEspecies, paramCidade, paramEstado, paramHistoria) {
+  new(paramNome, 
+    paramEspecies, 
+    paramCidade, 
+    paramEstado, 
+    paramHistoria, 
+    paramFoto) {
     // Pega a div lista-animais
     const divList = document.getElementById('lista-animais')
 
@@ -91,15 +102,23 @@ const NewCard = {
     newH.id = 'h'
     newH.innerText = paramHistoria
     newDiv.appendChild(newH)
-    
+
+    const imgElement = document.createElement("img");
+    imgElement.src = URL.createObjectURL(paramFoto);
+    imgElement.classList.add("imagem-card");
+
+    const divImagem = document.createElement("div");
+    divImagem.classList.add("div-imagem");
+    divImagem.appendChild(imgElement);
+    newDiv.appendChild(divImagem);
+
     
     const newButton = document.createElement('button')
     
     newButton.className= 'button one'
     newButton.textContent = 'Quero adotar'
     newDiv.appendChild(newButton)
-     
-   
+        
 
     divList.appendChild(newDiv)
 
