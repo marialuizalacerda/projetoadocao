@@ -5,29 +5,58 @@
 }
 
 body {
-    background: #f5c9f3;
-    font-family: 'Inter', sans-serif;
+    background: #fff;
+    font-family: 'Montserrat', sans-serif;
     }
 
 .container {
+          
     width: min(90vw,800px);
 
-    margin: auto;
+    margin: 140px auto;
 }
-/* Titles =============================================*/
-h2 {
-    margin: 3.2rem 0 0.8rem 1rem;
-    color: black;
 
-    font-weight: normal;
-    
-}
+
+
 /* Header =============================================*/
 header {
-    background: #f5c9f3;
-    padding: 3rem 0 10rem;
-    text-align: center;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    
+    padding: 32px 180px;
+  
+    background-color: #f7c5ef;
+    color: #4a086c;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    
+  }
+  
+  header ul:nth-child(1) {
+    color: #4a086c;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    
+  }
+  
+  header ul {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 65px;
+  
+    margin: auto;   
+    list-style: none;
+  
+  }
+  
+   header a {
+    text-decoration: none;
+  }
 
 #logo {
     color: black;
@@ -54,8 +83,11 @@ a {
 
     border-color: #3a393b;
     border-width: 1px;
-    color: black;
+    color: #4a086c;
     box-shadow: 2px 2px 4px ;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    
 }
 
 .button.cancel {
@@ -68,6 +100,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Montserrat', sans-serif;
 
     opacity: 0.6;
 
@@ -88,6 +121,7 @@ a {
     align-items: center;
     justify-content: center;
     margin: 0 15px;
+    font-family: 'Montserrat', sans-serif;
     opacity: 0.6;
     
 
@@ -108,8 +142,8 @@ a {
 }
 
 #lista h2 {
-    color: black;
-    margin-top: 1rem;
+    color: #4a086c;
+    font-weight: bolder;
     text-align: center;
 }
 
@@ -238,13 +272,15 @@ a {
 
 #form input {
     border-radius: 0.7rem;
-    padding: 2px 0;
+    padding: 2px 24px;
     margin: 4px 0;
+    border: 1px solid #E6E6F0;
     
 }
 
 #form textarea {
     border-radius: 1rem;
+    border: 1px solid #E6E6F0;
 }
 
 
@@ -266,8 +302,10 @@ a {
 footer {
     text-align: center;
     padding: 2rem;
-    color: #3a393b;
-    background: #e7b1f0;
+    color: #4a086c;
+    background: #f7c5ef;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 }
 
 /*Responsive =====================*/
